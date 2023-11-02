@@ -1,0 +1,236 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+
+
+/* ****** */
+/* FONTS */
+/* ****** */
+
+
+@font-face {
+  font-family: body-font2;
+  src: url('../fonts/eenfont.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: disney-font;
+  src: url('../fonts/waltographUI.ttf') format("ttf");
+}
+
+@font-face {
+  font-family: body-font;
+  src: url('../fonts/donald-duck.woff') format("wof");
+}
+
+@font-face {
+  font-family: duck-font;
+  src: url('../fonts/Minnie.ttf') format("ttf");
+}
+
+
+
+
+/* naar een idee van Jen Simmons */
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+body {
+  margin:0;
+}
+
+button:not([disabled]) {
+  cursor:pointer;
+}
+
+img {
+  max-width:100%;
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+  --color-brand:mediumblue;
+
+  --bg-body:#fedd05;
+  --clr-body:maroon;
+
+
+  --bg-header:mediumblue;
+  --clr-header:white;
+
+  --bg-footer:mediumblue;
+  --clr-footer:white;
+
+  --bg-header-a:lightpink;
+  --shdw-header-a:inset .25em .25em 0 #002;
+  --bg-footer-a:lightpink;
+  --shdw-footer-a: .25em .25em 0 deeppink;
+  --shdw-footer-a-active: 0 0 0 deeppink;
+
+  --font-body:hallo, sans-serif;
+  
+
+  --ws:.5rem;
+}
+
+@media (prefers-color-scheme:dark) {
+  :root {
+    --color-brand:mediumblue;
+
+    --bg-body:maroon;
+    --clr-body:#fedd05;
+  
+  
+    --bg-header:mediumblue;
+    --clr-header:white;
+  
+    --bg-footer:mediumblue;
+    --clr-footer:white;
+  
+    --bg-header-a:deeppink;
+    --shdw-header-a:inset -.25em -.25em 0 black;
+    --bg-footer-a:deeppink;
+    --shdw-footer-a:inset -.25em -.25em 0 black;
+  }
+}
+
+
+@media (width > 40em ) {
+  :root {
+    --ws:1rem;
+  }
+}
+
+
+
+
+/********************/
+/* ALGEMENE STYLING */
+/********************/
+
+body {
+  background-color: var(--bg-body);
+  color: var(--clr-body);
+  background-image:url('../images/Background-image.jpg')
+  background-colo
+}
+
+h1 {
+  color:var(--color-brand);
+  font-family:url(../fonts/Minnie.ttf)
+  
+}
+
+/* ... */
+
+/**********/
+/* HEADER */
+/**********/
+
+header {
+  background-color: var(--bg-header);
+  color: var(--clr-header);
+  padding:var(--ws);
+}
+
+header nav ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+
+  display: flex;
+  gap:var(--ws);
+
+  
+}
+
+header ul a {
+  background-color:var(--bg-header-a);
+  display: block;
+
+  padding:var(--ws) calc(var(--ws) * 2);
+  
+  border-radius:var(--ws);
+
+  box-shadow:var(--shdw-header-a);
+}
+
+
+
+/**********/
+/* FOOTER */
+/**********/
+
+footer {
+  background-color: var(--bg-footer);
+  color: var(--clr-footer);
+
+  padding:var(--ws);
+
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:var(--ws);
+}
+
+footer nav ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+
+  display: flex;
+  gap:var(--ws);
+}
+
+footer ul a {
+  background-color:var(--bg-footer-a);
+  display: block;
+  padding:var(--ws) calc(var(--ws) * 2);
+  border-radius:var(--ws);
+  box-shadow: var(--shdw-footer-a);
+  transition: .2s;
+}
+
+footer ul a:active {
+  box-shadow: var(--shdw-footer-a-active);
+  color:greenyellow;
+  translate: .25em .25em;
+  background-color: orange;
+}
+
+
+
+
+/********/
+/* MAIN */
+/********/
+
+main ol {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  /* column-gap:1em;
+  row-gap:1em; */
+
+  gap:1em;
+
+  padding:1em;
+  margin:0;
+  list-style: none; 
+ 
+}
+
+main ol li {
+  background-color: lime;
+  padding:1em;
+  /* aspect-ratio: 16/9; */
+}

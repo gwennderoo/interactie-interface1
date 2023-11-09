@@ -34,13 +34,14 @@
 /* naar een idee van Jen Simmons */
 *, *::after,
 *::before {
-  box-sizing:border-box; 
+  box-sizing:border-box;
+  cursor: url(../images/pngimg.com\ -\ cursor_PNG13.png), auto; 
 
 }
 
-.custom{
-  cursor: url(../images/duck_duik.png), auto;
-}
+/* .custom{
+  cursor: url(../images/icons8-banknotes-96.png), auto;
+} */
 
 body {
   margin:0;
@@ -66,18 +67,26 @@ img {
 
 
 
+
+
+
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 
+
 :root {
 
   --color-brand:rgb(33, 33, 163);
+  --color-brand2:maroon;
+
 
   --bg-body:#fedd05;
   --clr-body:rgb(255, 255, 255);
   --color-body2:black;
 
+  --clr-dialog:hsl(52, 82%, 50%);
+  --clr-body-dialog:black;
 
   --bg-header:mediumblue;
   --clr-header:white;
@@ -85,11 +94,14 @@ img {
   --bg-footer:mediumblue;
   --clr-footer:white;
 
-  --bg-header-a:lightpink;
+  --color-shadow: hsl(49, 99%, 40%);
+  --color-shadow2: yellow;
+
+  /* --bg-header-a:lightpink;
   --shdw-header-a:inset .25em .25em 0 #002;
   --bg-footer-a:lightpink;
   --shdw-footer-a: .25em .25em 0 deeppink;
-  --shdw-footer-a-active: 0 0 0 deeppink;
+  --shdw-footer-a-active: 0 0 0 deeppink; */
 
   --font-body:hallo, sans-serif;
   
@@ -99,15 +111,16 @@ img {
 
 
 
-/* dark mode css */
+
+/* ************* */
+/* DARK MODE css */
 
 @media (prefers-color-scheme:dark) {
   :root {
     --color-brand:maroon;
 
     --bg-body:maroon;
-    --clr-body:#fedd05;
-  
+    --clr-body:hsl(60, 4%, 95%);
   
     --bg-header:mediumblue;
     --clr-header:white;
@@ -115,19 +128,17 @@ img {
     --bg-footer:mediumblue;
     --clr-footer:white;
   
-    --bg-header-a:deeppink;
-    --shdw-header-a:inset -.25em -.25em 0 black;
-    --bg-footer-a:deeppink;
-    --shdw-footer-a:inset -.25em -.25em 0 black;
   }
 }
-
 
 @media (width > 40em ) {
   :root {
     --ws:1rem;
   }
 }
+
+
+
 
 
 
@@ -139,7 +150,7 @@ img {
 body {
   /* background-color: var(--bg-body); */
   color: var(--clr-body);
-  background-image: url('../images/ACHTERGROND\ IMAGE3_page-0001.jpg');
+  background-image: url('../images/achtegrond_final3.jpg');
   background-color: #a56600;
   background-repeat: no-repeat;
   background-size: 100vw;
@@ -148,9 +159,13 @@ body {
 }
 
 
-
 /* BRONNEN */
 /* https://www.youtube.com/watch?app=desktop&v=GjTwui3Myz4 */
+
+
+
+
+
 
 
 /**********/
@@ -161,9 +176,11 @@ header {
   /* background-color: var(--bg-header); */
   color: var(--clr-header);
   padding-left: 3.5em;
+  padding-top: 2em;
   font-family:disney-font, sans-serif;
   font-size: 1em;
   border:.5em;
+  
 
 
 
@@ -190,6 +207,10 @@ header ul a {
 
   box-shadow:var(--shdw-header-a);
 }
+
+
+
+
 
 
 
@@ -237,23 +258,15 @@ footer ul a:active {
 
 
 
+
+
+
 /********/
 /* MAIN */
 /********/
 
 
 
-/* ******************** */
-/* SECTION COIN COUNTER */
-
-
-
-/* section:nth-of-type(1) {
- background-color: var(--color-brand);
- padding-left: 1em;
-
-
-} */
 
 /* ** */
 /* H1 */
@@ -261,7 +274,7 @@ footer ul a:active {
 section h1:nth-of-type(1) {
   color:var(--color-brand);
     font-family:duck-font, sans-serif;
-    text-shadow: #002;
+    /* text-shadow: #002; */
     font-size: 6.5em;
     text-transform: uppercase;
     letter-spacing: 0em;
@@ -270,7 +283,7 @@ section h1:nth-of-type(1) {
 
 
   /* border: solid 1px; */
-  -webkit-text-stroke: .3px white; /* width and color */
+  -webkit-text-stroke: .3px var( --clr-body); /* width and color */
   transform:skewY(-5deg);
   display: flex;
   margin-bottom: .5em;  
@@ -280,7 +293,7 @@ section h1:nth-of-type(1) {
 section h1:nth-of-type(2) {
   color:var(--color-brand);
     font-family:duck-font, sans-serif;
-    text-shadow: #002;
+    /* text-shadow: #002; */
     font-size: 7.5em;
     text-transform: uppercase;
     letter-spacing: 0em;
@@ -288,15 +301,23 @@ section h1:nth-of-type(2) {
   margin-top: .3em;
 
   /* border: solid 1px; */
-  -webkit-text-stroke: .3px white; /* width and color */
+  -webkit-text-stroke: .3px var( --clr-body); /* width and color */
   transform:skewY(5deg);
   /* display: flex; */
   margin-bottom: 4px;
 
+
 }
+
+
+
+
+
 
 /* ** */
 /* H2 */
+/* ** */
+
 
 h2 {
   
@@ -309,26 +330,137 @@ padding-bottom: 10em;
 
 }
 
-
-
-section {
+section:first-of-type {
 /* display: flex; */
 display: grid;
 grid-column: 2 / -1;
+
+
 }
 
-/* *********** */
-/* IMG SCROOGE */
 
 
-main img:nth-of-type(1) {
-  align-content: right;
+
+
+
+/* ****************** */
+/* IMG SCROOGE DIALOG*/
+
+
+#img-scrooge {
+  /* align-content: right; */
+  position: absolute;
+  right: 25%;
+  top: 13%;
+  width: 22em;
+  
+
 }
+
+main > button {
+  
+  /* POSITIE */
+  position: absolute;
+  right: 15%;
+  top: 75%;
+  z-index: 50;
+  padding:.3em;
+  
+  /* BUTTON STYLING */
+  background-color: var(--color-brand);
+  border-radius: .8em;
+
+  /* FONTS */
+    font-family:duck-font, sans-serif;    
+    font-size: 1.5em;
+    /* text-transform: uppercase; */
+    color: var(--color-body);
+
+}
+
+.dialog-scrooge{
+display: none;
+}
+
+.zichtbaar {
+  position: absolute;
+  height: 70vh;
+  width: 70vw;
+  background-color: var(--color-brand);
+  border: 2px solid var( --clr-body);
+  border-radius:var(--ws);
+  box-shadow: .25em .25em 0 var( --clr-body);
+ 
+  z-index: 50;
+  display: block;
+}
+
+.zichtbaar section {
+  display: grid;
+  grid-template-columns: 45% 45% 10%;
+  grid-template-rows: 20% 80%;
+  height: 100%;
+}
+
+.zichtbaar section img {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  height: 100%;
+}
+
+.zichtbaar section h2{
+  padding: 0em;
+  font-weight: bold;
+  font-size: 200%;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-content: end;
+
+}
+
+.zichtbaar section p{
+  display: grid;
+  grid-column: 2;
+  font-family: body-font;
+  color: var( --clr-body);
+  letter-spacing: .2em;
+  line-height: 1.8em;
+
+
+}
+
+.zichtbaar section button{
+  background-color: var(--color-brand);
+  color:var( --clr-body) ;
+  border: 2px solid var( --clr-body);
+  box-shadow:  var(--shdw-header-a);
+  width: 50%;
+  height: auto;
+  aspect-ratio: 1;
+  justify-self: end;
+  align-self: start;
+
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+
+
+} 
+
+
+
+
+
 
 
 /* *************** */
 /* LIST EN SECTION */
-
 
 
 main ol {
@@ -347,10 +479,9 @@ main ol {
  
 }
 
-
 main ol li{
     font-family: body-font;
-  color: #fff;
+  color: var( --clr-body);
   /* border-radius:var(--ws); */
   display:flex;
   gap:3em;
@@ -370,33 +501,30 @@ main ol li section p{
   margin-top: 0em;
 }
 
-
 main ol li button{
   height: 100%;
   width: 15em;
   background: transparent;
   border: none;
+  filter: drop-shadow(.5em -.5em .5em var(--color-shadow));
 
 }
-
 
 main ol li:nth-of-type(even){
   justify-content: end;
 
 }
 
-
 main ol li section{
   background-color: var(--color-brand);
   padding:1em;
   border-radius:var(--ws);
   max-width: 50em;
-  border: 2px solid #fff;
-  /* box-shadow: .2em .2em  #fff; */
+  border: 2px solid var( --clr-body);
   opacity: 0;
   transition: 1s;
-}
 
+}
 
 main ol li section.verschuiven{
   opacity: 1;
@@ -411,7 +539,10 @@ main ol li button:nth-of-type(2){
 
 }
 
+main ol li:nth-of-type(odd) section{
+  box-shadow: .25em .25em 0 var( --clr-body);
 
+}
 
 main ol li:nth-of-type(even) section{
   /* background-color: #000 */
@@ -420,16 +551,21 @@ main ol li:nth-of-type(even) section{
   /* background-color:var(--color-brand); */
   /* background-color: var(--color-brand); */
   align-content: right;
+  box-shadow: -.25em .25em 0 var( --clr-body);
 
 
 
 }
-
 
 main ol li section p{
  font-family: sans-serif;
  max-width: 30em;
 }
+
+
+
+
+
 
 /* *************** */
 /* ANIMATION COINS */
@@ -451,7 +587,6 @@ main ol li button:hover:nth-of-type(1){
    }
 } */
 
-
 @keyframes coin1{
   0%{
     transform: rotate3d(.1, .1, 0, 0turn);
@@ -459,6 +594,216 @@ main ol li button:hover:nth-of-type(1){
   100%{
     transform: rotate3d(.1, .1, 0, 1turn);
   }
+}
+
+main ol li:nth-of-type(9) button {
+  width: 20em;
+  filter: drop-shadow(0em -2em 1.5em var(--color-shadow2));
+
+
+
+}
+
+
+
+
+
+
+/* ********************************** */
+/* IMAGES BINNEN SECTIONS OP TIJDSLIJN */
+
+
+main ol li section img:nth-of-type(1){
+  width: 6em;
+
+}
+
+main ol li:nth-of-type(6) section img:nth-of-type(2){
+  width: 15em;
+  float: right;
+  clear: right;
+
+}
+
+main ol li:nth-of-type(6) section ul{
+  display: flex;
+  grid-template-columns: 30% 70%;
+
+}
+
+main ol li:nth-of-type(6) section ul li{
+
+  margin: 0px;
+  width: 100%;
+  gap: 0em;
+  
+}
+
+main ol li section img:hover{
+  animation-name: schilderij;
+  animation-duration: 2s;
+  transition: ease-out 1s;
+}
+
+@keyframes schilderij {
+  0% {
+    scale:1;
+  }
+  50% {
+    scale:1.5;
+  }
+  100% {
+    scale:1;
+  }
+}
+
+
+
+
+
+
+/* *************** */
+/* SWIMMING SCROOGE */
+
+
+.scrooge-zwemmend {
+
+  position: absolute;
+  left: 12%;
+  top: 210%;
+
+  width: 25%;
+  
+
+}
+
+
+
+
+
+
+/* ******************** */
+/* DIALOOG 2 DE SLEUTEL */
+
+
+.button-sleutel {
+  
+  background-color: transparent;
+  width: 5em;
+  filter: drop-shadow(1px 1px 1px);
+  border: none;
+
+
+}
+
+.sleutel {
+  position: absolute;
+  height: 70vh;
+  width: 70vw;
+  background-color: var(--color-brand2);
+  
+
+
+
+  border: 2px solid var( --clr-body);
+  border-radius:var(--ws);
+  box-shadow: .25em .25em 0 var( --clr-body);
+ 
+  z-index: 50;
+  display: block;
+
+  overflow-x: auto;
+
+}
+
+.sleutel section ol {
+  display: flex;
+
+
+
+
+  /* grid-template-columns: 45% 45% 10%;
+  grid-template-rows: 20% 80%;
+  height: 100%; */
+}
+
+ 
+/* .sleutel section img {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  height: 100%;
+} */
+
+#h2 {
+  position: static;
+  top: 1em;
+  left:2em;
+
+  padding: 0em;
+  font-weight: bold;
+  font-size: 200%;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+}
+
+
+/* .sleutel section p{
+  display: grid;
+  grid-column: 2;
+  font-family: body-font;
+  color: #fff;
+  letter-spacing: .2em;
+
+
+} */
+
+.sluiten{
+  background-color: var(--color-brand);
+  color: var( --clr-body);
+  border: 2px solid var( --clr-body);
+  box-shadow:  var(--shdw-header-a);
+  width: 50%;
+  height: auto;
+  aspect-ratio: 1;
+  justify-self: end;
+  align-self: start;
+
+
+  /* grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4; */
+
+
+} 
+
+.sluiten2 {
+  width: 3em;
+  height: 3em;
+  background-color: var(--color-brand);
+  color: var( --clr-body);
+  border: 2px solid var( --clr-body);
+  box-shadow:  var(--shdw-header-a);
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-right: 2em;
+}
+
+.sleutel section ol {
+  margin: 0em;
+  padding: 1em;
+}
+
+.sleutel section ol li {
+
+  margin: 0em;
+  width: 20em;
+
 }
 
 
@@ -469,5 +814,15 @@ main ol li button:hover:nth-of-type(1){
 
 
 
-/* BRONNEN */
-/* https://tradeboost.eu/product/908/1_oz_disney_scrooge_mcduck_250_dollar */
+
+
+
+
+
+
+
+
+
+
+
+

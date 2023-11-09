@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
 
-<!-- <img src="images/Untitled_page-0001.jpg" alt="jpg"> -->
 
 <head>
 	<meta charset="UTF-8">
@@ -11,13 +10,13 @@
 	<title>VIDii 2023/24 - Tijdlijn</title>
 
 	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/png+xml" href="images/favicon.png">
+	<link rel="icon" type="image/png+xml" href="images/android-chrome-512x512.png">
 </head>
 
 <body>
 
 	<header>
-		<p>Disney 2023</p>
+		<p> Walt Disney 2023</p>
 	</header>
 
 	<!-- <section>
@@ -25,22 +24,28 @@
 	</section> -->
 
 	<main>
-		<img src="images/scrooge_png.webp" alt="webp">
+
+
+		<img id="img-scrooge" class="#img-scrooge" src="images/scroogemoney2.gif" alt="webp">
+		<!-- <img src="images/210c3791f80500719001d6234e394625.gif" alt="gif"> -->
+
+		<button id="button-dialog" class="button-dialog" > Click here </button>
+		
 			<dialog id="dialog-scrooge">
 				<section>
-					<img src="images/scrooge_png2.png" alt="png">
+					<img src="images/scrooge12.png" alt="png">
 					<h2>Welcome to my Money Vault</h2>
 					<p>
-						This is my Money Vault, all the money ive ever earned lies here infront of u. When you scroll down you go deeper into the history of my wealth. lets se what you can find...
+						This is my Money Vault, all the money ive ever earned lies here infront of u. 
+						When you scroll down you go deeper into the history of my wealth. lets see what you can find...
 					</p>
 
-					<form>
-						<button>x</button>
-					</form>
+					<button class="sluiten">x</button>
+					
 				</section>
-
-
 			</dialog>
+
+
 		<section>
 			<h1>Scrooge</h1>
 			<h1>Mcduck</h1>
@@ -50,115 +55,165 @@
 			<li>
 				<button id="coin1"><img src="images/scrooge coin3.png" alt="png"></button>
 				<section class="info">
-					<h3>networth 2022</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatum minus excepturi
-						enim unde autem sit obcaecati ad hic, aut laudantium impedit illo doloremque repellat voluptate
-						recusandae explicabo ipsa vitae.</p>
+					<h3>Legacy - Early 21st Century
+					</h3>
+					<p>"As I entered the early 21st century, my legacy as one of the richest ducks in the world was firmly established. 
+						My financial empire had expanded into various industries, and my estimated net worth had reached astronomical levels. 
+						While the exact figures may be a well-kept secret, it's safe to say that my fortune was measured in the hundreds of billions, if not trillions, of dollars.”
+					</p>
 				</section>
 			</li>
 			<li>
 				<button id="coin2"><img src="images/scrooge coin3.png" alt="png"></button>				
 				<section class="info">
-					<h3>networth 2022</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatum minus excepturi
-						enim unde autem sit obcaecati ad hic, aut laudantium impedit illo doloremque repellat voluptate
-						recusandae explicabo ipsa vitae.</p>
+					<h3>Reunions and Family - 1980s
+					</h3>
+					<p>"In the 1980s, I reconnected with my family, including my nephew Donald and his nephews, Huey, Dewey, and Louie. 
+						It was a time of reunions and adventures, and my wealth continued to grow. By the 1980s, my estimated net worth had soared into the tens of billions, 
+						making me one of the wealthiest individuals on Earth."
+
+					</p>
 				</section>
 			</li>
+
+		
 			<li>
 				<button id="coin3"><img src="images/scrooge coin3.png" alt="png"></button>				
 				<section class="info">
-					<h3>networth 2022</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatum minus excepturi
-						enim unde autem sit obcaecati ad hic, aut laudantium impedit illo doloremque repellat voluptate
-						recusandae explicabo ipsa vitae.</p>
+					<h3>Post-Retirement Adventures - 1950s-1960s
+					</h3>
+					<p>"After my retirement, I couldn't resist the call of adventure. 
+						I embarked on various journeys, including treasure hunts and business ventures. During the 1950s and 1960s, 
+						I continued to amass wealth, and my fortune grew significantly. My estimated net worth during this period was well into the billions.”
+					</p>
 				</section>
 			</li>
+	
 			<li>
 				<button id="coin4"><img src="images/scrooge coin3.png" alt="png"></button>				
 				<section>
-					<h3>networth 2022</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatum minus excepturi
-						enim unde autem sit obcaecati ad hic, aut laudantium impedit illo doloremque repellat voluptate
-						recusandae explicabo ipsa vitae.</p>
+					<h3>Retirement - 1942-1947
+					</h3>
+					<p>"In 1942, I felt tired and depressed and decided to retire. My fortune was considerable at that time, 
+						but the exact figures have always been a bit unclear.
+						In 1947 it was the first that me and my adventures where relevant enough to be shown to the world”
+						</p>
 				</section>
 			</li>
+
+		<img class="scrooge-zwemmend"  src="images/scrooge-geldZwemmen.png" alt="png">
+
+
 			<li>
 				<button id="coin5"> <img src="images/scrooge coin3.png" alt="png"></button>				
 				<section>
-					<h3>networth 2022</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatum minus excepturi
-						enim unde autem sit obcaecati ad hic, aut laudantium impedit illo doloremque repellat voluptate
-						recusandae explicabo ipsa vitae.</p>
+					<h3>World Travels - 1909-1930
+					</h3>
+					<p>"I circumnavigated the globe, making all sorts of business deals and adventures. After my travels, I returned to Duckburg. 
+						It was also during this time that I first met my ten-year-old nephew, Donald Duck, along with his twin sister, Della Thelma Duck. 
+						On the same day, I lost contact with my family and became the richest duck in the world. My fortune at that time was substantial, estimated in the billions.”
+					</p>
 				</section>
 			</li>
 			<li>
 				<button id="coin6"><img src="images/scrooge coin3.png" alt="png"></button>				
 				<section>
-					<h3>networth 2022</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatum minus excepturi
-						enim unde autem sit obcaecati ad hic, aut laudantium impedit illo doloremque repellat voluptate
-						recusandae explicabo ipsa vitae.</p>
+					<h3>Duckburg - 1902
+					</h3>
+					<p>"The family and I moved to Duckburg, Calisota, USA, where I met the Duck family and the founding members of The Junior Woodchucks. 
+						It was there that I had my first encounter with the Beagle Boys since my riverboat days. Oh, and of course, I also had a conversation with President Theodore Roosevelt.”
+					</p>
+					<ul>
+						<li><img src="images/scrooge-1902-2.png" alt="png"></li>
+						<li><img src="images/Duckburg_Map.webp" alt="png"></li>
+					</ul>
+
 				</section>
 			</li>
+
+
+		<button id="button-sleutel" class="button-sleutel"> <img src="images/sleutel.png" alt="png"></button>
+		
+		<dialog id="dialog-sleutel">
+
+					<section>
+						<h2 id="h2">The evolution of the Money Bin</h2>
+	
+						<button class="sluiten2">x</button>
+						<ol>
+							<li><img src="images/scrooge-frame-1951.png" alt="png"></li>
+							<li><img src="images/scrooge-frame 1952.png" alt="png"></li>
+							<li><img src="images/scrooge-frame-1953.png" alt="png"></li>
+							<li><img src="images/scrooge-frame-1952.png" alt="png"></li>
+							<li><img src="images/scrooge-frame-1955.png" alt="png"></li>
+							<li><img src="images/scrooge-frame-2010.png" alt="png"></li>
+						</ol>
+					
+						
+					</section>
+		</dialog>
+
+
+
 			<li>
 				<button id="coin7"><img src="images/scrooge coin3.png" alt="png"></button>				
 				<section>
-					<h3>networth 2022</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatum minus excepturi
-						enim unde autem sit obcaecati ad hic, aut laudantium impedit illo doloremque repellat voluptate
-						recusandae explicabo ipsa vitae.</p>
+					<h3>Building an Empire - 1899-1902
+					</h3>
+					<p>"I bought a bank and began building my small financial empire. By 1902, I had already become a billionaire. 
+						It was an exciting time for my financial adventure.”
+					</p>
+					<img src="images/scrooge-1897-2.png" alt="png">
+
 				</section>
 			</li>
 			<li>
 				<button id="coin8"><img src="images/scrooge coin3.png" alt="png"></button>				
 				<section>
-					<h3>networth 2022</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatum minus excepturi
-						enim unde autem sit obcaecati ad hic, aut laudantium impedit illo doloremque repellat voluptate
-						recusandae explicabo ipsa vitae.</p>
+					<h3>The Path to Riches - 1898
+					</h3>
+					<p>"I started amassing my fortune by being 'smarter than the smarties and tougher than the toughies.' 
+						I became what they call an 'adventure capitalist,' seeking lost treasures to add to my wealth. 
+						During this time, I became a millionaire, with an estimate of several million.”
+						</p>
 				</section>
 			</li>
 			<li>
-				<button id="coin9"><img src="images/scrooge coin3.png" alt="png"></button>				
+				<button id="coin9"><img src="images/Disney_Emoji_Blitz_-_Item_Emoji_-_Number_One_Dime.webp" alt="webp"></button>				
 				<section>
-					<h3>networth 2022</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatum minus excepturi
-						enim unde autem sit obcaecati ad hic, aut laudantium impedit illo doloremque repellat voluptate
-						recusandae explicabo ipsa vitae.</p>
+					<h3>Early Adventures - 1877-1880
+					</h3>
+					<p>"My youth brought me into conflict with the Whiskervilles, a family I've always had something to do with. 
+						It was during these years that I earned my first coin, that famous 'Number One Dime.' 
+						I traveled to the United States on a cattle boat to make my fortune. My account balance at that time was zero, only my lucky number one dime in my pocket.”
+					</p>
 				</section>
 			</li>
 			<li>
-				<button id="coin10"><img src="images/scrooge coin3.png" alt="png"></button>	
+				<button id="coin10"><img src="images/scrooge-book.png" alt="png"></button>	
 				<!-- <button><img src="images/Gem_Location-Amethyst_Shiny.webp" alt="webp"></button>	 -->
 			
 				<section>
-					<h3>networth 2022</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatum minus excepturi
-						enim unde autem sit obcaecati ad hic, aut laudantium impedit illo doloremque repellat voluptate
-						recusandae explicabo ipsa vitae.</p>
+					<h3>The Beginning - 1867</h3>
+					<p>"Ah, 1867, the year of my birth in Glasgow, Scotland. My parents, Fergus McDuck and Downy O'Drake, 
+						welcomed me into the world. I was blessed with two younger sisters, Matilda McDuck and Hortense McDuck. 
+						At that time, of course, I had not a dime to my name.”</p>
+					<img src="images/scrooge-1877-2.png" alt="png">
 				</section>
 			</li>
 
 		</ol>
+		
+		<!-- <img src="images/210c3791f80500719001d6234e394625.gif" alt="gif"> -->
+
 
 		
 	</main>
 
-	<!-- <footer>
-		<p>copyright</p>
 
-		<nav>
-			<ul>
-				<li><a href="">FB</a></li>
-				<li><a href="">IN</a></li>
-				<li><a href="">TW</a></li>
-			</ul>
-		</nav>
-	</footer> -->
-
-
-
+<audio src="./audio/moneySound.mp3"></audio>
+<audio src="./audio/moneySound.mp3"></audio>
+<audio src="./audio/Heavenly Sound Effect Meme (Perfectly Cut).mp3"></audio>
 
 	<script src="scripts/script.js"></script>
 </body>
